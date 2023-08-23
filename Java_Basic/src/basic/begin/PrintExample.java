@@ -43,6 +43,8 @@ public class PrintExample {
 		//%라는 문자 자체를 표현할 때는 %% 쓰시면 됩니다.
 		double rate = 64.126;
 		System.out.printf("합격률: %.2f%%입니다.\n", rate);
+		
+		
 		 
 		
 
