@@ -44,7 +44,7 @@ public class PrintExample {
 		double rate = 64.126;
 		System.out.printf("합격률: %.2f%%입니다.\n", rate);
 		 
-		
+		String s = "그는 나에게 '도와줘!' 라고 말했다.";
 
 	}
 
