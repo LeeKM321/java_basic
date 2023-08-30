@@ -16,6 +16,8 @@ public class PersonMain {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		Person kim = new Person();
+		
 		System.out.print("이름: ");
 		String name = sc.next();
 		
