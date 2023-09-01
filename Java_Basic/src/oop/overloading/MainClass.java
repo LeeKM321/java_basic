@@ -23,6 +23,8 @@ public class MainClass {
 		System.out.println("직사각형의 넓이: " + c.calcRectArea(10, 20));
 		System.out.println("사다리꼴의 넓이: " + c.calcRectArea(5, 13, 7));
 		
+		
+		
 	}
 
 }
