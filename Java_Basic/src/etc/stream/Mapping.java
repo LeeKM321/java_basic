@@ -56,7 +56,7 @@ public class Mapping {
         // 원하는 정보만 추출하여 새로운 컬렉션으로 반환해 줌.
 
         List<Integer> nameList = menuList.stream()
-                .map(dish -> dish.getCalories())
+                .map(Dish::getCalories)
                 .collect(Collectors.toList());
 
         System.out.println("nameList = " + nameList);
@@ -65,9 +65,9 @@ public class Mapping {
             요리 목록에서 메뉴 이름과 칼로리를 추출하고 싶다.
          */
         menuList.stream()
-                .map(dish -> new SimpleDish(dish))
+                .map(SimpleDish::new)
                 .collect(Collectors.toList())
-                .forEach(d -> System.out.println(d));
+                .forEach(System.out::println);
 
         /*
             메뉴 목록에서 칼로리가 500칼로리보다 큰
@@ -77,7 +77,7 @@ public class Mapping {
         System.out.println("======================================================");
         menuList.stream()
                 .filter(dish -> dish.getCalories() > 500)
-                .map(dish -> new DishNameType(dish))
+                .map(DishNameType::new)
                 .collect(Collectors.toList())
                 .forEach(ds -> System.out.println("ds = " + ds));
 

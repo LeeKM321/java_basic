@@ -1,12 +1,9 @@
 package etc.stream;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
-import static etc.stream.Menu.*;
-import static java.util.stream.Collectors.*;
+import static etc.stream.Menu.menuList;
+import static java.util.stream.Collectors.toList;
 
 public class Filtering {
     public static void main(String[] args) {
@@ -16,9 +13,9 @@ public class Filtering {
 
         // 메뉴 중에 채식주의자가 먹을 수 있는 요리를 필터링
         menuList.stream()
-                .filter(dish -> dish.isVegetarian())
+                .filter(Dish::isVegetarian)
                 .collect(toList())
-                .forEach(dish -> System.out.println(dish));
+                .forEach(System.out::println);
 
 //        dishInVegiterian.forEach(dish -> System.out.println("dish = " + dish));
 
@@ -27,7 +24,7 @@ public class Filtering {
         menuList.stream()
                 .filter(d -> d.getType() == Dish.Type.MEAT && d.getCalories() < 600)
                 .collect(toList())
-                .forEach(d -> System.out.println(d));
+                .forEach(System.out::println);
 
         System.out.println("==== 요리중에 요리 이름이 4글자인 요리만 필터링 ====");
 
